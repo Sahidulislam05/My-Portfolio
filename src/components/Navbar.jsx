@@ -54,15 +54,15 @@ export default function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-linear-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
-          <Link
-            href="https://drive.google.com/file/d/1rHdWrHXhiBgoa8rJD9EH9eN967ZDX-ZQ/view?usp=sharing"
+          <a
+            href="/resume.pdf"
             target="_blank"
-            download
+            download="Sahidul_Resume.pdf"
             className="px-5 py-2 rounded-full bg-linear-to-r from-cyan-500 to-purple-600 text-white font-medium text-sm hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5"
           >
             <span>Resume</span>
             <Download className="w-4 h-4" />
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -94,15 +94,15 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <Link
-                href="https://drive.google.com/file/d/1rHdWrHXhiBgoa8rJD9EH9eN967ZDX-ZQ/view?usp=sharing"
+              <a
+                href="/resume.pdf"
                 target="_blank"
-                download
+                download="Sahidul_Resume.pdf"
                 className="w-full text-center px-6 py-3 rounded-full bg-linear-to-r from-cyan-500 to-purple-600 text-white font-medium hover:shadow-lg transition-all"
                 onClick={() => setIsOpen(false)}
               >
                 Download Resume
-              </Link>
+              </a>
             </div>
           </motion.div>
         )}

@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Server } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
   {
@@ -16,6 +17,7 @@ const projects = [
       client: "https://github.com/Sahidulislam05/ZapShift",
       server: "https://github.com/Sahidulislam05/ZapShift_REST_API",
     },
+    imageUrl: "/banner1.png",
     gradient: "from-blue-500/20 to-cyan-500/20",
   },
   {
@@ -23,12 +25,13 @@ const projects = [
     tag: "Community Platform",
     description:
       "A platform to create and track social service events. Features event filtering, searching, and date validation logic with a modern UI.",
-    tech: ["React.js", "Tailwind CSS"],
+    tech: ["React", "MongoDB", "Express", "Firebase"],
     links: {
       live: "https://eco-event-social-development.netlify.app",
       client: "https://github.com/Sahidulislam05/Eco-Event-Client",
       server: "https://github.com/Sahidulislam05/Eco-Event-Server",
     },
+    imageUrl: "/banner2.png",
     gradient: "from-green-500/20 to-emerald-500/20",
   },
   {
@@ -36,12 +39,13 @@ const projects = [
     tag: "E-commerce (Next.js)",
     description:
       "SEO-optimized store with server-side rendering. Features dynamic inventory management, secure user sessions, and a responsive shopping experience.",
-    tech: ["Next.js 16", "Tailwind", "MongoDB"],
+    tech: ["Next.js 16", "Tailwind", "Express", "MongoDB"],
     links: {
       live: "https://tech-gadget-store-bd.vercel.app",
       client: "https://github.com/Sahidulislam05/Tech-Gadget-Store",
       server: "https://github.com/Sahidulislam05/Tech-Gadget-Store-API",
     },
+    imageUrl: "/banner3.png",
     gradient: "from-purple-500/20 to-pink-500/20",
   },
 ];
@@ -85,6 +89,16 @@ export default function Projects() {
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
                     {project.title}
                   </h3>
+                  {project?.imageUrl && (
+                    <div className="relative w-full overflow-hidden my-5 ">
+                      <Image
+                        src={project.imageUrl}
+                        alt={`${project.title} screenshot`}
+                        width={450}
+                        height={10}
+                      />
+                    </div>
+                  )}
                   <p className="text-neutral-400 text-sm leading-relaxed mb-6">
                     {project.description}
                   </p>
