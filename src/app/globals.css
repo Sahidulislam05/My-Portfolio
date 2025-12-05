@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-poppins);
+}
+
+@layer base {
+  body {
+    @apply bg-neutral-950 text-neutral-200;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+  
+  .glass-card {
+    @apply bg-neutral-900/50 backdrop-blur-sm border border-white/5 hover:border-purple-500/30 transition-colors duration-300;
+  }
+
+  .text-neon-blue {
+    @apply text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)];
+  }
+
+  .text-neon-purple {
+    @apply text-purple-400 drop-shadow-[0_0_10px_rgba(168,85,247,0.5)];
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-700 rounded-full border-2 border-neutral-900;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-600;
+}
