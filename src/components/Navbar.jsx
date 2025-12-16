@@ -54,7 +54,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="/resume.pdf"
+            href="/resume.sahidul_islam.pdf"
             target="_blank"
             download="Sahidul_Resume.pdf"
             className="px-5 py-2 rounded-full bg-linear-to-r from-cyan-500 to-purple-600 text-white font-medium text-sm hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5"
@@ -94,7 +94,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <a
-                href="/resume.pdf"
+                href="/resume.sahidul_islam.pdf"
                 target="_blank"
                 download="Sahidul_Resume.pdf"
                 className="w-full text-center px-6 py-3 rounded-full bg-linear-to-r from-cyan-500 to-purple-600 text-white font-medium hover:shadow-lg transition-all"
