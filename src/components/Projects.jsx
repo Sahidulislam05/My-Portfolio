@@ -11,13 +11,27 @@ const projects = [
     tag: "Parcel Delivery App (MERN)",
     description:
       "A multi-role dashboard system (User, Rider, Admin) for logistics management. Features dynamic parcel booking, real-time tracking, and secure authentication.",
-    tech: ["React", "MongoDB", "Express", "Firebase"],
+    tech: ["React", "MongoDB", "Express", "Firebase", "JWT"],
     links: {
       live: "https://zap-shift-service.web.app",
       client: "https://github.com/Sahidulislam05/ZapShift",
       server: "https://github.com/Sahidulislam05/ZapShift_REST_API",
     },
     imageUrl: "/banner1.png",
+    gradient: "from-blue-500/20 to-cyan-500/20",
+  },
+  {
+    title: "Civil Report",
+    tag: "Public Infrastructure Issue Reporting System",
+    description:
+      "A full-stack civic tech platform where citizens can report public infrastructure problems and track their resolution transparently. Admins and staff can efficiently manage, assign, and resolve issues with proper workflow tracking.",
+    tech: ["React Js", "MongoDB", "Express", "Firebase", "JWT"],
+    links: {
+      live: "https://civil-report.vercel.app",
+      client: "https://github.com/Sahidulislam05/Civil-Report",
+      server: "https://github.com/Sahidulislam05/Civil-Report-API",
+    },
+    imageUrl: "/banner4.png",
     gradient: "from-blue-500/20 to-cyan-500/20",
   },
   {
@@ -33,6 +47,20 @@ const projects = [
     },
     imageUrl: "/banner2.png",
     gradient: "from-green-500/20 to-emerald-500/20",
+  },
+  {
+    title: "A Game Library",
+    tag: "GameHub",
+    description:
+      "GameHub — an engaging online game library built with React, Tailwind CSS, and Firebase. Discover, explore, and support indie game developers in a visually immersive environment.",
+    tech: ["React Js", "Tailwind", "Firebase", "DaisyUI"],
+    links: {
+      live: "https://game-hub-a7422.web.app",
+      client: "https://github.com/Sahidulislam05/Game-Hub",
+      server: "https://github.com/Sahidulislam05/Game-Hub",
+    },
+    imageUrl: "/banner5.png",
+    gradient: "from-purple-500/20 to-pink-500/20",
   },
   {
     title: "Tech Gadget Store BD",
@@ -109,7 +137,7 @@ export default function Projects() {
                     {project.tech.map((t) => (
                       <span
                         key={t}
-                        className="text-xs text-neutral-500 bg-neutral-950 px-2 py-1 rounded border border-white/5"
+                        className="text-xs text-black bg-white px-2 py-1 rounded border border-white/5"
                       >
                         {t}
                       </span>

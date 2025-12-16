@@ -1,8 +1,9 @@
 "use client";
-
 import React from "react";
 import { motion } from "framer-motion";
 import { Code2, Terminal, Cpu } from "lucide-react";
+import Image from "next/image";
+import myImg from "../../public/Sahidulislam.jpg";
 
 export default function Hero() {
   return (
@@ -22,7 +23,7 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-cyan-400 text-sm font-medium mb-6">
+          <span className="inline-block mt-8 md:mt-0 rounded-full bg-white/5 border border-white/10 text-cyan-400 text-sm font-medium mb-5">
             Available for Work
           </span>
           <h1 className="text-4xl md:text-6xl font-bold font-heading leading-tight mb-4">
@@ -60,7 +61,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative hidden md:block"
+          className="relative"
         >
           {/* Abstract 3D-like coding graphic */}
           <div className="relative w-full aspect-square max-w-md mx-auto">
@@ -69,17 +70,14 @@ export default function Hero() {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="absolute inset-0 bg-linear-to-r from-cyan-500/10 to-purple-600/10 rounded-3xl border border-white/10 backdrop-blur-sm p-8"
             >
-              <div className="absolute top-4 left-4 flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500/50" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
-                <div className="w-3 h-3 rounded-full bg-green-500/50" />
-              </div>
-              <div className="mt-8 space-y-4 opacity-50 font-mono text-sm">
-                <div className="h-4 bg-white/10 rounded w-3/4" />
-                <div className="h-4 bg-white/10 rounded w-1/2" />
-                <div className="h-4 bg-white/10 rounded w-5/6" />
-                <div className="h-4 bg-white/10 rounded w-full" />
-                <div className="h-4 bg-white/10 rounded w-2/3" />
+              <div className="relative w-full h-full mx-auto rounded-2xl overflow-hidden">
+                <Image
+                  src={myImg}
+                  alt="Sahidul Islam"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
 
               {/* Floating Icons */}
